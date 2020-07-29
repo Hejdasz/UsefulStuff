@@ -5,14 +5,14 @@ rf.testrar()                                #extract rar
 rf.extractall(d)
 rf.close()
 
-'''
 
-#exampleZip.extractall(p)                   '''extract zip'''
-#exampleZip.close()
 
-#print(exampleZip.namelist())                '''show files in zip'''
+exampleZip.extractall(p)                   '''extract zip'''
+exampleZip.close()
 
-'''
+print(exampleZip.namelist())                '''show files in zip'''
+
+
 for f in rf.infolist():
     Fname = f.filename
     FnameSplit = Fname.split()                  #show files in rar
@@ -20,6 +20,6 @@ for f in rf.infolist():
 
 
 
-'''
 
-#mylist = [f for f in glob.glob("*.rar")]    #list of all files in dir
+
+mylist = [f for f in glob.glob("*.rar")]    #list of all files in dir
