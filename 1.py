@@ -22,3 +22,13 @@ mylist = [f for f in glob.glob("*.rar")]     #list of all files in dir
 list_of_files = glob.glob('*') #            * latest file in folder
 latest_file = max(list_of_files, key=os.path.getctime)
 print (latest_file)
+
+
+
+def set_key(dictionary, key, value):                #append dic
+     if key not in dictionary:
+         dictionary[key] = value
+     elif type(dictionary[key]) == list:
+         dictionary[key].append(value)
+     else:
+         dictionary[key] = [dictionary[key], value]
